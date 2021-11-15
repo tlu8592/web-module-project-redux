@@ -5,11 +5,11 @@ const initialState = {
     displayFavorites: true
 }
 
-const favoriteMovieReducer = (state = initialState, action) => {
+const favoritesReducer = (state = initialState, action) => {
     switch(action.type) {
         default:
             return state;
     }
 }
 
-export default favoriteMovieReducer;
+export default favoritesReducer;
