@@ -8,8 +8,8 @@ const Movie = (props) => {
     const { push } = useHistory();
 
     // const movies = [];
-    const { movies } = props;
-    const movie = movies.find(movie=>movie.id===Number(id));
+    // const { movies } = props;
+    const movie = props.movies.find(movie=>movie.id===Number(id));
 
     const handleDeleteMovie = (id) => {
         props.deleteMovie(id);
