@@ -12,7 +12,7 @@ import AddMovieForm from './components/AddMovieForm';
 import FavoriteMovieList from './components/FavoriteMovieList';
 
 const App = props => {
-  const displayFavorites = true;
+  const { appTitle, displayFavorites } = props;
 
   return (
     <div>
@@ -21,7 +21,7 @@ const App = props => {
       </nav>
 
       <div className="container">
-        <MovieHeader/>
+        <MovieHeader appTitle={appTitle} />
         <div className="row ">
           {displayFavorites && <FavoriteMovieList/>}
         
@@ -48,4 +48,11 @@ const App = props => {
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  return({
+    appTitle: state.movie.appTitle,
+    displayFavorites: state.favorite.displayFavorites
+  })
+}
+
+export default connect(mapStateToProps)(App);
