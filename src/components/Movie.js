@@ -18,9 +18,9 @@ const Movie = (props) => {
         push('/movies');
     }
 
-    const handleAddFavorites = (id) => {
-        props.addFavorites(id);
-        console.log('add favorite');
+    const handleAddFavorites = (newFavorite) => {
+        props.addFavorites(newFavorite);
+        // console.log('add favorite');
     }
     
     return(<div className="modal-page col">
@@ -53,8 +53,8 @@ const Movie = (props) => {
                         
                         <section>
                             {/* <span className="m-2 btn btn-dark">Favorite</span> */}
-                            <span onClick={() => handleAddFavorites(movie.id)} className="m-2 btn btn-dark">Favorite</span>
-                            {}
+                            {/* <span onClick={() => handleAddFavorites(movie)} className="m-2 btn btn-dark">Favorite</span> */}
+                            {displayFavorites === false ? <span onClick={() => handleAddFavorites(movie)} className="m-2 btn btn-dark">Favorite</span> : null }
                             <span onClick={() => handleDeleteMovie(movie.id)} className="delete"><input type="button" className="m-2 btn btn-danger" value="Delete"/></span>
                         </section>
                     </div>
