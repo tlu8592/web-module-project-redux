@@ -12,8 +12,8 @@ import AddMovieForm from './components/AddMovieForm';
 import FavoriteMovieList from './components/FavoriteMovieList';
 
 const App = props => {
-  const { appTitle } = props;
-  const displayFavorites = true;
+  const { appTitle, displayFavorites } = props;
+  // const displayFavorites = true;
 
   return (
     <div>
@@ -51,7 +51,8 @@ const App = props => {
 
 const mapStateToProps = (state) => {
   return({
-    appTitle: state.movie.appTitle
+    appTitle: state.movie.appTitle,
+    displayFavorites: state.favorite.displayFavorites
   })
 }
 
