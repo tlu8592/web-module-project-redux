@@ -13,7 +13,6 @@ import FavoriteMovieList from './components/FavoriteMovieList';
 
 const App = props => {
   const { appTitle, displayFavorites } = props;
-  // const displayFavorites = true;
 
   return (
     <div>

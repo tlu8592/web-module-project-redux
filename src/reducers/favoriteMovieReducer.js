@@ -9,7 +9,6 @@ const initialState = {
 const favoritesReducer = (state = initialState, action) => {
     switch(action.type) {
         case TOGGLE_FAVORITES:
-            // return !state.displayFavorites;
             return {
                 ...state,
                 displayFavorites: !state.displayFavorites

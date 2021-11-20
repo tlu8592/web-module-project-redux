@@ -7,5 +7,3 @@ export default combineReducers({
     movie: movieReducer,
     favorite: favoritesReducer
 });
-
-// export default movieReducer;

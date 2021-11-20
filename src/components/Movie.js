@@ -8,7 +8,6 @@ const Movie = (props) => {
     const { id } = useParams();
     const { push } = useHistory();
 
-    // const movies = [];
     const { movies } = props;
     const movie = props.movies.find(movie=>movie.id===Number(id));
     const { displayFavorites } = props;
@@ -20,7 +19,6 @@ const Movie = (props) => {
 
     const handleAddFavorites = (newFavorite) => {
         props.addFavorites(newFavorite);
-        // console.log('add favorite');
     }
     
     return(<div className="modal-page col">
@@ -52,8 +50,6 @@ const Movie = (props) => {
                         </section>
                         
                         <section>
-                            {/* <span className="m-2 btn btn-dark">Favorite</span> */}
-                            {/* <span onClick={() => handleAddFavorites(movie)} className="m-2 btn btn-dark">Favorite</span> */}
                             {displayFavorites === false ? <span onClick={() => handleAddFavorites(movie)} className="m-2 btn btn-dark">Favorite</span> : null }
                             <span onClick={() => handleDeleteMovie(movie.id)} className="delete"><input type="button" className="m-2 btn btn-danger" value="Delete"/></span>
                         </section>
